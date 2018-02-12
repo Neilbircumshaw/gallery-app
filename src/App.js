@@ -26,7 +26,7 @@ class App extends Component {
 <Route exact path="/" component = {Photos}/>
 <Route exact path="/search" component = {Search}/>
 <Route path="/search/:searchTerm" component = {Photos} />
-<Route  component = {NotFound}/>
+<Route  component = {NotFound} />
 </Switch>
 
 </div>
