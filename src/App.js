@@ -7,7 +7,10 @@ import Search from './components/Search';
 import NotFound from './components/NotFound';
 
 
-
+//this App component loads the NavMenu component and sets up the routes for the
+//Photos and search component if the paths match. Used a param on the search path so that
+//mutiple components did not have to be made, it will simply take this param and use it in the get axios get
+//request in the FetchingImages component.
 
 class App extends Component {
 
@@ -32,10 +35,8 @@ class App extends Component {
 </div>
 
 </BrowserRouter>
-
-    );
+);
+ }
   }
-
-}
 
 export default App;

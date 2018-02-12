@@ -1,13 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
+//This code creates an unordered list with the list items as NavLinks to the respective URL paths
 
 
 const NavMenu = props => {
-
-
-
 
  return(
 
@@ -20,8 +17,6 @@ const NavMenu = props => {
         <li><NavLink exact to='/search'> Search</NavLink></li>
       </ul>
     </nav>
-
-
  )
 };
 
