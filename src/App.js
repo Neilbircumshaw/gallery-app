@@ -1,38 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import NavMenu from "./NavMenu";
-import PhotoContainer from "./PhotoContainer"
-import { BrowserRouter} from "react-router-dom";
-import "./App.css";
+import Photos from "./Photos";
+import Search from './Search';
+import NotFound from './NotFound';
 
 
 
 
-const App = props => {
+class App extends Component {
 
-   /*performSearch = (query) => {
-     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=15&format=json&nojsoncallback=1`)
-    .then(response => {
-    this.setState({
-     images: response.data.photos.photo
-   });
-   })
-   .catch(error => {
-     console.log("Error fetching and parsing data", error);
-   });
- }
+  render() {
+    return (
 
-*/
-return (
 <BrowserRouter>
-<div className="container">
- <NavMenu  />
- <PhotoContainer />
+
+<div className="App">
+  <div className='App-header'>
+    <h1 className='App-title'>Flickr Search App</h1>
+  </div>
+<NavMenu />
+
+<Switch>
+<Route exact path="/" component = {Photos}/>
+<Route exact path="/search" component = {Search}/>
+<Route path="/search/:searchTerm" component = {Photos} />
+<Route  component = {NotFound}/>
+</Switch>
+
 </div>
+
 </BrowserRouter>
 
+    );
+  }
 
-       );
-
-};
+}
 
 export default App;

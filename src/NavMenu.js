@@ -13,9 +13,11 @@ const NavMenu = props => {
 
     <nav className="main-nav">
       <ul>
-        <li><NavLink to="/cats" >Cats</NavLink></li>
-        <li><NavLink to='/dogs'>Dogs</NavLink></li>
-        <li><NavLink to='/sloths'>Sloths</NavLink></li>
+        <li><NavLink exact to="/" >Home</NavLink></li>
+        <li><NavLink exact to="/search/cats" >Cats</NavLink></li>
+        <li><NavLink exact to='/search/dogs'>Dogs</NavLink></li>
+        <li><NavLink exact to='/search/sloths'>Sloths</NavLink></li>
+        <li><NavLink exact to='/search'> Search</NavLink></li>
       </ul>
     </nav>
 
