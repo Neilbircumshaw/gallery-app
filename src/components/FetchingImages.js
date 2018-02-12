@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import apiKey from "./config.js";
+import apiKey from "../config.js";
 import axios from "axios";
 import PhotoContainer from "./PhotoContainer";
 

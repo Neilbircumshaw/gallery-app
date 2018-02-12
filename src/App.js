@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import NavMenu from "./NavMenu";
-import Photos from "./Photos";
-import Search from './Search';
-import NotFound from './NotFound';
+import NavMenu from "./components/NavMenu";
+import Photos from "./components/Photos";
+import Search from './components/Search';
+import NotFound from './components/NotFound';
 
 
 
